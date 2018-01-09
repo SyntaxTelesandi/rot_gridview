@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
-    final String Email = "poncoe4mac@gmail.com";
+    final String Email = "poncoe4mac@gmail.com"; //
 
     GridView grid; //Grid
     GridAdapter adapter; //grid
