@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         // GridView Awal
 
-        Judul = new String[]{"Situs Resmi", "Letak Lokasi", "Official Kaskus", "Official Twitter", "Telesandi News", "Situs Tomcat",
+        Judul = new String[]{"Dialog", "Dialog", "Dialog", "Dialog", "Dialog", "Dialog",
                 "Tels Radio", "Telesandi Art", "Telesandi Services", "English Club",
                 "Osis Telesandi", "Official Telesandi", "Telesandi Futsal", "Angklung Tels", "Ultras Telkom74",
                 "Ultras Telkom74", "Tomcat Telesandi", "Osis Telesandi", "Paskibra Telesandi",
@@ -79,25 +79,25 @@ public class MainActivity extends AppCompatActivity {
                 Intent myIntent = null;
                 if (position == 0) {
                     //myIntent = new Intent(view.getContext(), SitusSekolah.class); <!-- contoh Kalo Mau Kasih Intent -->
-                    myIntent = new Intent (Intent.ACTION_VIEW, Uri.parse("https://twitter.com/official_Tels"));
+                    dialog1(); //buat manggil si dialog di gridview
                 }
                 if (position == 1) {
                     //myIntent = new Intent(view.getContext(), LetakSekolah.class); <!-- contoh Kalo Mau Kasih Intent -->
-                    myIntent = new Intent (Intent.ACTION_VIEW, Uri.parse("https://twitter.com/official_Tels"));
+                    dialog2(); //buat manggil si dialog di gridview
                 }
                 if (position == 2) {
-                    myIntent = new Intent (Intent.ACTION_VIEW, Uri.parse("http://www.kaskus.co.id/thread/56a6e4cc529a45cc398b4568/official-smk-telekomunikasi-telesandi-bekasi-tempat-ngobrolsharing--berkumpul"));
+                    dialog1(); //buat manggil si dialog di gridview
                 }
                 if (position == 3) {
-                    myIntent = new Intent (Intent.ACTION_VIEW, Uri.parse("https://twitter.com/official_Tels"));
+                    dialog2(); //buat manggil si dialog di gridview
                 }
                 if (position == 4) {
                    // myIntent = new Intent(view.getContext(), TelsNews.class); <!-- contoh Kalo Mau Kasih Intent -->
-                    myIntent = new Intent (Intent.ACTION_VIEW, Uri.parse("https://twitter.com/official_Tels"));
+                    dialog1(); //buat manggil si dialog di gridview
                 }
                 if (position == 5) {
                     //myIntent = new Intent(view.getContext(), SitusTomcat.class); <!-- contoh Kalo Mau Kasih Intent -->
-                    myIntent = new Intent (Intent.ACTION_VIEW, Uri.parse("https://twitter.com/official_Tels"));
+                    dialog2(); //buat manggil si dialog di gridview
                 }
 
 
@@ -167,6 +167,26 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+    }
+
+    private void dialog1() {
+        new AlertDialog.Builder(this).setTitle("Hi")
+                .setMessage("Yeah Its a Dialog 1 in Gridview!")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialoginterface, int i) {
+                    }
+                }).show();
+
+    }
+
+    private void dialog2() {
+        new AlertDialog.Builder(this).setTitle("Hi")
+                .setMessage("Yeah Its a Dialog 2 in Gridview!")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialoginterface, int i) {
+                    }
+                }).show();
+
     }
 
     //GridView Akhir
